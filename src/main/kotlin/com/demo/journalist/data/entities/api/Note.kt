@@ -1,4 +1,4 @@
-package com.demo.journalist.data.entities
+package com.demo.journalist.data.entities.api
 
 import com.fasterxml.jackson.annotation.JsonInclude
 import org.hibernate.annotations.CreationTimestamp
@@ -8,25 +8,25 @@ import java.util.*
 import javax.persistence.*
 
 @Entity
-@Table(name="todo")
+@Table(name = "note")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-data class Todo(
+@NamedQuery(name= "Note.findByTitle",
+            query= "SELECT n FROM Note n WHERE n.title Like ?1")
+data class Note(
         @Id
-        @GeneratedValue(generator = "uuid2")
-        @GenericGenerator(name = "uuid2", strategy = "uuid2")
+        @GeneratedValue(generator="uuid2")
+        @GenericGenerator(name="uuid2", strategy = "uuid2")
         @Column(columnDefinition = "varchar(36)")
         var id: String = "",
         var title: String,
         var message: String,
-        var schedule: Long,
         var location: String = "",
         @CreationTimestamp
         var created: Date = Date(),
         @UpdateTimestamp
         var modified: Date = Date()
-
 ) {
     constructor() : this(
-            "", "", "", -1, ""
+            "", "", "", ""
     )
 }

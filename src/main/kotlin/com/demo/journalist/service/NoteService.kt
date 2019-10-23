@@ -1,7 +1,7 @@
 package com.demo.journalist.service
 
-import com.demo.journalist.data.dto.NoteDTO
-import com.demo.journalist.data.entities.Note
+import com.demo.journalist.data.dto.entity.NoteDTO
+import com.demo.journalist.data.entities.api.Note
 import com.demo.journalist.repository.NoteRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service

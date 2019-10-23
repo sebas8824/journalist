@@ -1,3 +1,3 @@
-package com.demo.journalist.controller.dto
+package com.demo.journalist.data.dto.request
 
 data class NoteFindByTitleRequest(val title: String)

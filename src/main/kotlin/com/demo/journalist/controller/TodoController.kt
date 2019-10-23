@@ -1,7 +1,7 @@
 package com.demo.journalist.controller
 
-import com.demo.journalist.controller.dto.TodoLaterThanRequest
-import com.demo.journalist.data.dto.TodoDTO
+import com.demo.journalist.data.dto.request.TodoLaterThanRequest
+import com.demo.journalist.data.dto.entity.TodoDTO
 import com.demo.journalist.service.TodoService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType

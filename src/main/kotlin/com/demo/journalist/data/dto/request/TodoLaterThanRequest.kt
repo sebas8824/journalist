@@ -1,4 +1,4 @@
-package com.demo.journalist.controller.dto
+package com.demo.journalist.data.dto.request
 
 import java.util.*
 

@@ -1,6 +1,6 @@
-package com.demo.journalist.data.dto
+package com.demo.journalist.data.dto.entity
 
-import com.demo.journalist.data.entities.Todo
+import com.demo.journalist.data.entities.api.Todo
 import java.util.*
 
 data class TodoDTO(var title: String, var message: String, var schedule: Long, var location: String = "") {

@@ -1,6 +1,6 @@
 package com.demo.journalist.repository
 
-import com.demo.journalist.data.entities.Todo
+import com.demo.journalist.data.entities.api.Todo
 import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.CrudRepository
 

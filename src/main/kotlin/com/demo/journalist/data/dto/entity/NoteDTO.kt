@@ -1,6 +1,6 @@
-package com.demo.journalist.data.dto
+package com.demo.journalist.data.dto.entity
 
-import com.demo.journalist.data.entities.Note
+import com.demo.journalist.data.entities.api.Note
 import java.util.*
 
 data class NoteDTO(var title: String, var message: String, var location: String = "") {

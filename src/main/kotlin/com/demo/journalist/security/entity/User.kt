@@ -1,4 +1,4 @@
-package com.demo.journalist.security
+package com.demo.journalist.security.entity
 
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.annotation.JsonProperty
@@ -52,27 +52,19 @@ open class User(
         var modified: Date = Date()
 
 ): UserDetails {
-
     constructor() : this(
             "", "", "", "", "", "", true, true, true, true, Date(), Date()
     )
-
     override fun getAuthorities(): MutableCollection<out GrantedAuthority> {
         val authorities = mutableListOf<GrantedAuthority>()
         roles.split(",").forEach { authorities.add(SimpleGrantedAuthority(it.trim())) }
         return authorities
     }
-
     override fun isEnabled() = enabled
-
     override fun getUsername() = email
-
     override fun isCredentialsNonExpired() = credentialsNotExpired
-
     override fun getPassword() = pwd
-
     override fun isAccountNonExpired() = accountNonExpired
-
     override fun isAccountNonLocked() = accountNonLocked
 
 }

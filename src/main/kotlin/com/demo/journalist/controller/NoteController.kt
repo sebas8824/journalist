@@ -1,7 +1,7 @@
 package com.demo.journalist.controller
 
-import com.demo.journalist.controller.dto.NoteFindByTitleRequest
-import com.demo.journalist.data.dto.NoteDTO
+import com.demo.journalist.data.dto.request.NoteFindByTitleRequest
+import com.demo.journalist.data.dto.entity.NoteDTO
 import com.demo.journalist.service.NoteService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
