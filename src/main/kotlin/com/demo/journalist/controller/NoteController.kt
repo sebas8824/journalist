@@ -1,5 +1,6 @@
 package com.demo.journalist.controller
 
+import com.demo.journalist.controller.dto.NoteFindByTitleRequest
 import com.demo.journalist.data.dto.NoteDTO
 import com.demo.journalist.service.NoteService
 import org.springframework.beans.factory.annotation.Autowired
@@ -23,5 +24,9 @@ class NoteController {
 
     @PutMapping(produces = arrayOf(MediaType.APPLICATION_JSON_VALUE), consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE))
     fun updateNote(@RequestBody note: NoteDTO) = service.updateNote(note)
+
+    @PostMapping("/title", produces= arrayOf(MediaType.APPLICATION_JSON_VALUE), consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE))
+    fun getByNotesTitle(@RequestBody payload: NoteFindByTitleRequest): Iterable<NoteDTO> =
+            service.findByTitle(payload.title)
 
 }
