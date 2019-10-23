@@ -1,5 +1,6 @@
 package com.demo.journalist.controller
 
+import com.demo.journalist.controller.dto.TodoLaterThanRequest
 import com.demo.journalist.data.dto.TodoDTO
 import com.demo.journalist.service.TodoService
 import org.springframework.beans.factory.annotation.Autowired
@@ -25,4 +26,7 @@ class TodoController {
     @PutMapping(produces = arrayOf(MediaType.APPLICATION_JSON_VALUE), consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE))
     fun updateTodo(@RequestBody todo: TodoDTO) = service.updateTodo(todo)
 
+    @PostMapping("/lt", produces = arrayOf(MediaType.APPLICATION_JSON_VALUE), consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE))
+    fun getTodosLaterThan(@RequestBody payload: TodoLaterThanRequest): Iterable<TodoDTO>
+            = service.getScheduledLaterThan(payload.date)
 }
