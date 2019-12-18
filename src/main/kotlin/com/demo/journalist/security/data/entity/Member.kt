@@ -1,4 +1,4 @@
-package com.demo.journalist.security.entity
+package com.demo.journalist.security.data.entity
 
 import java.util.*
 import javax.persistence.DiscriminatorValue

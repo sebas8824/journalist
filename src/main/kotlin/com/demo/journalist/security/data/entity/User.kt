@@ -1,4 +1,4 @@
-package com.demo.journalist.security.entity
+package com.demo.journalist.security.data.entity
 
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.annotation.JsonProperty

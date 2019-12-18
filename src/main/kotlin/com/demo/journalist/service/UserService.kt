@@ -1,11 +1,11 @@
 package com.demo.journalist.service
 
 import com.demo.journalist.repository.UserRepository
-import com.demo.journalist.security.dto.UserDTO
-import com.demo.journalist.security.dto.UserDetailsDTO
-import com.demo.journalist.security.entity.Admin
-import com.demo.journalist.security.entity.Member
-import com.demo.journalist.security.entity.User
+import com.demo.journalist.security.data.dto.UserDTO
+import com.demo.journalist.security.data.dto.UserDetailsDTO
+import com.demo.journalist.security.data.entity.Admin
+import com.demo.journalist.security.data.entity.Member
+import com.demo.journalist.security.data.entity.User
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService

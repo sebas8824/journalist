@@ -1,4 +1,4 @@
-package com.demo.journalist.security.dto
+package com.demo.journalist.security.data.dto
 
 import java.util.*
 
